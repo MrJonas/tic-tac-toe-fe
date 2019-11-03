@@ -38,16 +38,16 @@ const Board: React.FC<BoardProps> = ({
                 {board.map((field, i) => (
                     <div key={i}
                         className={`field ${(winingCodition && winingCodition.indexOf(i) !== -1) ? 'winning-field' : ''}`}
-                        data-hook= {`field-${i}`}
+                        data-hook={`field-${i}`}
                         onClick={() => handleFieldClick(i)}>
                         {field}
                     </div>))
                 }
             </div>
-            { !gameEnded && <h2 data-hook="gameStatus">{`${nextPlayer} move next`}</h2> }
-    { gameEnded && isDraw && <h2>it's draw!</h2> }
-    { gameEnded && !isDraw && <h2>{`${winner} is winner!`}</h2> }
-    <button className="button" data-hook="startNewGameButton" onClick={() => handleButtonClick()}>start new game</button>
+            {!gameEnded && <h2 data-hook="gameStatus">{`${nextPlayer} move next`}</h2>}
+            {gameEnded && isDraw && <h2>it's draw!</h2>}
+            {gameEnded && !isDraw && <h2>{`${winner} is winner!`}</h2>}
+            <button className="button" data-hook="startNewGameButton" onClick={() => handleButtonClick()}>start new game</button>
         </React.Fragment >
     );
 }
