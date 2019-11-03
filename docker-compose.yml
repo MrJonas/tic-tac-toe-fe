@@ -1,0 +1,15 @@
+version: '2'
+
+services:
+  tic-tac-toe-fe:
+    container_name: tic-tac-toe-fe
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - '3000:80'
+  tic-tac-toe-api:
+    build: https://github.com/MrJonas/tic-tac-toe-api.git
+    container_name: tic-tac-toe-api
+    ports:
+      - '4000:4000'
