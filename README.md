@@ -34,6 +34,8 @@ go to [localhost:3000](http://localhost:3000/)
 - [Testing API](https://github.com/MrJonas/tic-tac-toe-api/blob/master/app/controllers/gameController.test.ts)
 - [E2E test](https://github.com/MrJonas/tic-tac-toe-fe/blob/master/src/e2e/e2e.test.tsx)
 
+to run tests use `npm test`.
+
 ### Asumptions made from requirements
 
 - No database required. API saves data to memory.
